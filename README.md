@@ -6,7 +6,7 @@
 
 ## ▶ 読む
 
-### **https://USERNAME.github.io/REPO/**
+### **[https://USERNAME.github.io/REPO/](https://nito-0210.github.io/water-optics/)**
 
 ブラウザで開くだけです。インストール不要、スマートフォンでも読めます。
 
@@ -69,11 +69,6 @@ CLIP STUDIO PAINT を想定した合成モードとレイヤー構成も載せ�
 - **ファイルの再配布・転載** — ご遠慮ください。リンクでの紹介は歓迎します
 - **翻訳・改変版の公開** — ご相談ください
 
-<!--
-  上記は一例です。もっと緩くする場合は CC BY 4.0、
-  商用利用だけ制限する場合は CC BY-NC 4.0 などの
-  既存ライセンスを指定する方法もあります。
--->
 
 ## 訂正・ご指摘
 
@@ -82,8 +77,8 @@ CLIP STUDIO PAINT を想定した合成モードとレイヤー構成も載せ�
 
 ## 作者
 
-- FANBOX: https://
-- X: https://
+Nito
+- X: [https://x.com/nito_fox_](https://x.com/nito_fox_)
 
 ---
 
@@ -91,4 +86,4 @@ CLIP STUDIO PAINT を想定した合成モードとレイヤー構成も載せ�
 
 | 日付 | 内容 |
 |---|---|
-| 2026-xx-xx | 公開 |
+| 2026-08-16 | 公開 |
