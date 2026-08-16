@@ -6,7 +6,7 @@
 
 ## ▶ 読む
 
-### **[https://USERNAME.github.io/REPO/](https://nito-0210.github.io/water-optics/)**
+### **[https://nito-0210.github.io/water-optics/](https://nito-0210.github.io/water-optics/)**
 
 ブラウザで開くだけです。インストール不要、スマートフォンでも読めます。
 
