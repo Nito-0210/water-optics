@@ -3,15 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>水中表現の光学リファレンス</title>
+<title>水表現の光学リファレンス</title>
 <meta name="description" content="水に浸かった物体をどう描くか。屈折による変形、色の減衰、水際の微細構造、毛、水中視点まで。光学の原理から作画手順までを図とインタラクティブな計算でまとめた、イラスト制作向けリファレンスです。">
 <meta name="theme-color" content="#0d1418">
+<!-- ═══════════════════════════════════════════════════════
+     ▼ 公開設定ブロック ─ 書き換えるのはここだけ
+     新しい版に差し替えるときは、このブロックだけ
+     コピーして貼り替えれば設定が引き継げます。
+     ═══════════════════════════════════════════════════════ -->
 <meta property="og:type" content="article">
-<meta property="og:title" content="水中表現の光学リファレンス">
+<meta property="og:title" content="水表現の光学リファレンス">
 <meta property="og:description" content="屈折による変形、色の減衰、水際の微細構造、毛、水中視点まで。光学の原理から作画手順までを図とインタラクティブな計算でまとめた、イラスト制作向けリファレンスです。">
-<meta property="og:image" content="https://nito-0210.github.io/water-optics/ogp.png">
-<meta property="og:url" content="https://nito-0210.github.io/water-optics/">
+<meta property="og:image" content="https://USERNAME.github.io/REPO/ogp.png">
+<meta property="og:url" content="https://USERNAME.github.io/REPO/">
 <meta name="twitter:card" content="summary_large_image">
+<!-- 独自の追記（アクセス解析など）があればこの下に -->
+
+<!-- ▲ 公開設定ブロック ここまで
+     ═══════════════════════════════════════════════════════ -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -279,7 +288,7 @@ input[type=range]::-moz-range-thumb{
 <div class="shell">
 <aside class="rail">
   <div class="rail-mark">OPTICS REF</div>
-  <p class="rail-title">水中表現の<br>光学リファレンス</p>
+  <p class="rail-title">水表現の<br>光学リファレンス</p>
   <nav id="toc">
     <div class="grp">FORM</div>
     <a href="#s1">1 · 屈折と作画手順</a>
@@ -310,7 +319,7 @@ input[type=range]::-moz-range-thumb{
 <main>
 <header class="mast">
   <div class="eyebrow">WATER · REFRACTION · ABSORPTION · MENISCUS · FUR</div>
-  <h1>水中表現の光学リファレンス</h1>
+  <h1>水表現の光学リファレンス</h1>
   <p>水に浸かった物体をどう描くか。形の変形、色の減衰、水際の微細構造、そして毛。すべて光学の原理から作画手順まで一本で繋いだ資料です。数値はページ内でリアルタイムに計算しています。</p>
 </header>
 
@@ -328,9 +337,9 @@ input[type=range]::-moz-range-thumb{
 <!-- ============ 1 ============ -->
 <section id="s1">
   <h2><span class="num">01</span>屈折と作画手順</h2>
-  <p class="lede">水中の部分は水面に向かって縦にだけ潰れる。左右にはズレない。まずこの一点を作図で確認します。</p>
+  <p class="lede">水中の部分は水面に向かって縦にだけ潰れます。左右にはズレません。まずこの一点を作図で確認します。</p>
 
-  <p>水の<span class="gl" data-g="屈折率">屈折率</span> <code>n = 1.333</code>。光がどれだけ曲がるかは<span class="gl" data-g="スネルの法則">スネルの法則</span>で決まります。物体から出た光は水面で曲がってから目に届くので、脳はその光線をまっすぐ逆に延長した位置に物体があると解釈します。その位置が<strong>実際より浅い</strong>。</p>
+  <p>水の<span class="gl" data-g="屈折率">屈折率</span> <code>n = 1.333</code>。光がどれだけ曲がるかは<span class="gl" data-g="スネルの法則">スネルの法則</span>で決まります。物体から出た光は水面で曲がってから目に届くので、脳はその光線をまっすぐ逆に延長した位置に物体があると解釈します。その位置は<strong>実際より浅くなります</strong>。</p>
 
   <p>意外なのは<em>水平方向にはズレない</em>ことです。作図してみると、屈折で横にずれる分と、浅く見えることで横にずれる分が、ちょうど打ち消し合います。だから鉛筆を斜めに挿したときに「折れて」見えるのは、水中部分が持ち上がった結果であって、横に平行移動しているのではありません。</p>
 
@@ -390,7 +399,7 @@ input[type=range]::-moz-range-thumb{
     <figcaption><span class="fig-n">FIG 1.2</span>CLIP STUDIOなら、水面より下を選択して自由変形。上辺を水面ラインに固定したまま下辺を持ち上げれば、それが物理的に正しい変形です。<b>横幅は絶対に変えない</b>ので、結果として水中の脚は「短く、相対的に太く」見えます。</figcaption>
   </figure>
 
-  <div class="key"><p>圧縮の基準は必ず<strong>水面</strong>。深いところほど絶対量は大きく持ち上がりますが、比率は一定です。ただしこの「水面」は<em>画面上の1本の水平線ではありません</em> ── そこが次の項です。</p></div>
+  <div class="key"><p>圧縮の基準は必ず<strong>水面</strong>。深いところほど絶対量は大きく持ち上がりますが、比率は一定です。ただしこの「水面」は<em>画面上の1本の水平線ではありません</em>。そこが次の項です。</p></div>
 
   <h3>水面は線ではなく「面」</h3>
   <p>水面は水平な<strong>平面</strong>です。斜めから見ると、その平面は画面上で奥ほど高く写ります。だから腕が水面を横切る2点は、<em>画面上で同じ高さには来ません</em>。</p>
@@ -489,7 +498,7 @@ input[type=range]::-moz-range-thumb{
       <text x="506" y="248" class="s-lbl-c" text-anchor="end">曲がりが浅く、開いて見えるようになる</text>
       <text x="14" y="290" class="s-tiny">※ 断面図なので水面は水平。斜めから見た場合は下の 3D ビューアで確認できます</text>
     </svg>
-    <figcaption><span class="fig-n">FIG 1.4</span>肘は最も深いので最も大きく浮上します。結果として<b>肘の曲がりは浅く、開いた角度に見える</b>ようになる ── これがこの構図で一番目立つ変化です。逆に言えば、水中の肘を実際のポーズどおりの鋭い角度で描くと、それだけで水が消えます。</figcaption>
+    <figcaption><span class="fig-n">FIG 1.4</span>肘は最も深いので最も大きく浮上します。結果として<b>肘の曲がりは浅く、開いた角度に見える</b>ようになります。これがこの構図で一番目立つ変化です。逆に言えば、水中の肘を実際のポーズどおりの鋭い角度で描くと、それだけで水が消えます。</figcaption>
   </figure>
 
   <div class="bad"><b>パースの注意　</b>「画面上で真上」が成り立つのは、<b>垂直線を平行に描いている場合</b>（1点・2点透視）です。3点透視で垂直方向にも<span class="gl" data-g="消失点">消失点</span>を取っているなら、真上ではなく<b>その点自身の垂直収束線に沿って</b>消失点方向へ動かしてください。</div>
@@ -525,7 +534,7 @@ input[type=range]::-moz-range-thumb{
         <div class="rd"><span class="k">2交差点を結んだ線</span><span class="n warm" id="b3t2">44°</span></div>
         <div class="rd"><span class="k">肘の移動方向</span><span class="n">常に画面の垂直</span></div>
       </div>
-      <div class="verdict"><b>読み取り方</b>方位角を回すと、2つの交差点（橙）の高さの差も、それを結んだ線の傾きも大きく変わります。それでも<b>肘は必ず緑の垂直線の上を動きます</b> ── 灰色の実際の肘と水色の見かけの肘は、常に同じ画面横位置に並びます。<br><br>もう一つ、伏角を上げていくと<b>移動そのものが見えなくなる</b>のがわかります。画面上の移動量は <code>深さ × (1−r) × cos(伏角)</code> なので、真上に近づくほど圧縮率は0.75に緩むうえ、垂直方向が画面上で潰れて二重に効きます。</div>
+      <div class="verdict"><b>読み取り方</b>方位角を回すと、2つの交差点（橙）の高さの差も、それを結んだ線の傾きも大きく変わります。それでも<b>肘は必ず緑の垂直線の上を動きます</b>。灰色の実際の肘と水色の見かけの肘は、常に同じ画面横位置に並びます。<br><br>もう一つ、伏角を上げていくと<b>移動そのものが見えなくなる</b>のがわかります。画面上の移動量は <code>深さ × (1−r) × cos(伏角)</code> なので、真上に近づくほど圧縮率は0.75に緩むうえ、垂直方向が画面上で潰れて二重に効きます。</div>
     </div>
   </div>
 
@@ -560,11 +569,11 @@ input[type=range]::-moz-range-thumb{
       <tr><td class="mono">30°</td><td class="mono">1.15 ×</td><td>やや開いた脚</td></tr>
       <tr><td class="mono">45°</td><td class="mono">1.41 ×</td><td>斜めに入れた腕</td></tr>
       <tr><td class="mono">60°</td><td class="mono">2.00 ×</td><td>水面に浅く差し入れた前腕</td></tr>
-      <tr><td class="mono">75°</td><td class="mono">3.86 ×</td><td>ほぼ寝かせた腕。<b>水際が非常に長く伸びる</b></td></tr>
+      <tr><td class="mono">75°</td><td class="mono">3.86 ×</td><td>ほぼ寝かせた腕。<b>水際が太さの4倍近くまで伸びる</b></td></tr>
     </tbody>
   </table></div>
 
-  <p>これは水平面内での楕円の話なので、画面上ではさらに<code>sin(伏角)</code>だけ縦に潰れます（§12の浮き輪と同じ）。<strong>寝かせた前腕の水際は、太さの2〜4倍の長さに伸びた細い楕円</strong>になる ── ここを円形に描くと、腕が水面に突き刺さっているように見えます。</p>
+  <p>これは水平面内での楕円の話なので、画面上ではさらに<code>sin(伏角)</code>だけ縦に潰れます（§12の浮き輪と同じ）。<strong>寝かせた前腕の水際は、太さの2〜4倍の長さに伸びた細い楕円</strong>になります。ここを円形に描くと、腕が水面に突き刺さっているように見えます。</p>
 </section>
 
 <!-- ============ 2 ============ -->
@@ -612,7 +621,7 @@ input[type=range]::-moz-range-thumb{
 <!-- ============ 3 ============ -->
 <section id="s3">
   <h2><span class="num">03</span>吸収と散乱</h2>
-  <p class="lede">水中の色変化は、必ず2つの現象に分解できる。この分解が全ての土台です。</p>
+  <p class="lede">水中の色変化は、必ず2つの現象に分解できます。ここから全部が始まります。</p>
 
   <div class="key"><p><strong>吸収</strong>は距離に応じて指数関数的に光を失う現象 → <em>乗算</em>で表現。<strong><span class="gl" data-g="散乱">散乱</span></strong>は水自体の色が距離とともに乗ってくる現象 → <em>通常レイヤー</em>で表現。<br>片方だけでは絶対に正しくなりません。乗算だけだと暗く沈み、加算だけだと白茶ける。</p></div>
 
@@ -648,7 +657,7 @@ input[type=range]::-moz-range-thumb{
   </figure>
 
   <h3>コースティクス ─ 水底の網目模様</h3>
-  <p>吸収と散乱のほかに、もう一つ水中の明るさを作る現象があります。波打つ水面が<strong>レンズのはたらき</strong>をして、光を一箇所に集めたり散らしたりする。その結果、水底や水中の体に<strong>明るい網目模様</strong>が焼き付きます。これがコースティクス（<span class="gl" data-g="焦散">焦散</span>）です。</p>
+  <p>吸収と散乱のほかに、もう一つ水中の明るさを作る現象があります。波打つ水面が<strong>レンズのはたらき</strong>をして、光を一箇所に集めたり散らしたりします。その結果、水底や水中の体に<strong>明るい網目模様</strong>が焼き付きます。これがコースティクス（<span class="gl" data-g="焦散">焦散</span>）です。</p>
   <ul>
     <li><b>浅いほど細かく、コントラストが高い。</b>深くなるほどぼやけて広がります</li>
     <li><b>上を向いた面にだけ乗る。</b>光は上から降ってくるので、太ももの表や足の甲には強く、脚の側面には弱く、下向きの面には出ません。全面に均一に乗せると途端に嘘っぽくなります</li>
@@ -674,7 +683,7 @@ input[type=range]::-moz-range-thumb{
   <h2><span class="num">04</span>乗算値カード</h2>
   <p class="lede">CSPの乗算レイヤーにそのまま置ける色。<span class="gl" data-g="sRGB">sRGB</span>のガンマ補正済みです。</p>
 
-  <p>ここが実務上の落とし穴です。CSPやPhotoshopの乗算は<strong><span class="gl" data-g="ガンマ空間">ガンマ空間</span></strong>で数値を掛け算しますが、物理的な減衰は<strong><span class="gl" data-g="リニア空間">リニア空間</span></strong>で起きます。生の透過率をそのまま乗算色にすると、赤が落ちすぎて不自然になる。下の値は <code>透過率^(1/2.2)</code> を済ませてあります。</p>
+  <p>ここが実務上の落とし穴です。CSPやPhotoshopの乗算は<strong><span class="gl" data-g="ガンマ空間">ガンマ空間</span></strong>で数値を掛け算しますが、物理的な減衰は<strong><span class="gl" data-g="リニア空間">リニア空間</span></strong>で起きます。生の透過率をそのまま乗算色にすると、赤が落ちすぎて不自然になります。下の値は <code>透過率^(1/2.2)</code> を済ませてあります。</p>
 
   <div class="console">
     <div class="console-hd">
@@ -768,7 +777,7 @@ input[type=range]::-moz-range-thumb{
   <h3>メニスカスは環境の一部を1mmに圧縮した鏡</h3>
   <p>平らな水面から物体に近づくにつれて、水面の法線は垂直から少しずつ傾いていきます。つまり幅1mmの中に<strong>少しずつ角度の違う鏡が並んでいる</strong>。ただし傾ける範囲は無制限ではなく、<code>β最大 = 90° − 接触角</code>で頭打ちになります。</p>
 
-  <div class="key"><p>濡れた肌の接触角は約55°なので<strong>βは最大35°</strong>。伏角45°で見た場合、映すのは垂直から−45°〜+25°の範囲 ── <em>ほぼ全域が空</em>です。だから屋外では帯のどこかが必ず明るくなり、<strong>明線は描き忘れると必ず嘘になる</strong>。逆に室内で天井が暗ければ、この範囲に明るいものが入らないので<em>明線は出ません</em>。</p></div>
+  <div class="key"><p>濡れた肌の接触角は約55°なので<strong>βは最大35°</strong>。伏角45°で見た場合、映すのは垂直から−45°〜+25°の範囲で、<em>ほぼ全域が空</em>です。だから屋外では帯のどこかが必ず明るくなり、<strong>明線は描き忘れると必ず嘘になります</strong>。逆に室内で天井が暗ければ、この範囲に明るいものが入らないので<em>明線は出ません</em>。</p></div>
 
   <figure>
     <svg viewBox="0 0 520 322" role="img" aria-label="接触角によってメニスカスが映す環境の範囲が変わる">
@@ -825,10 +834,10 @@ input[type=range]::-moz-range-thumb{
     <figcaption><span class="fig-n">FIG 5.2</span>メニスカスの法線が垂直から傾ける最大角は <code>β最大 = 90° − 接触角</code> で決まります。<b>濡れた肌は接触角55°なのでβは最大35°までしか振れず、映せる範囲は空の一部だけ</b>。だから肌の水際は帯全体が明るく、暗線は出ません。ガラスや樹脂は接触角が小さいので法線が水平近くまで振れ、水平線より下まで映して<b>接触線に暗線が出ます</b>。同じ水際でも、素材で見え方が変わる理由がこれです。</figcaption>
   </figure>
 
-  <div class="bad"><b>よくある誤解　</b>2つあります。<br><br>① 「接触線付近は<span class="gl" data-g="グレージング入射">グレージング入射</span>になるので反射率が40〜80%まで上がる」──<b>ほぼ真上から見下ろす場合にしか成り立ちません</b>。伏角45°ではメニスカスのどの面も入射角は55°以下にとどまり、反射率は数%です。真上から見たときだけ垂直に近い面を真横から見る形になり、物体の周囲に細く明るいリングが出ます。<br><br>② 「明線のすぐ隣には必ず暗線が来る」──<b>肌では成り立ちません</b>。上の計算どおり、肌のメニスカスは空しか映さないので反射由来の暗線は生じない。肌の水際で明線の下に見える暗い帯は、メニスカスに遮られた陰と、水膜で鏡面光沢が消えたことによるもので、<b>反射ではなく陰影</b>です。だから色は環境色ではなく物体色を暗くしたものが正しい。反射由来の暗線が出るのはガラス・樹脂・塗装面など<span class="gl" data-g="接触角">接触角</span>の小さい素材だけです。</div>
+  <div class="bad"><b>よくある誤解　</b>2つあります。<br><br>① 「接触線付近は<span class="gl" data-g="グレージング入射">グレージング入射</span>で反射率40〜80%」。これは<b>ほぼ真上から見下ろす場合にしか成り立ちません</b>。伏角45°ではメニスカスのどの面も入射角は55°以下にとどまり、反射率は数%です。真上から見たときだけ垂直に近い面を真横から見る形になり、物体の周囲に細く明るいリングが出ます。<br><br>② 「明線のすぐ隣に暗線が来る」。これも<b>肌では成り立ちません</b>。肌のメニスカスは空しか映さないので、反射由来の暗線は生じません。肌の水際で明線の下に見える暗い帯は、メニスカスに遮られた陰と、水膜で鏡面光沢が消えたことによるもので、<b>反射ではなく陰影</b>です。だから色は環境色ではなく物体色を暗くしたものが正しくなります。反射由来の暗線が出るのは、ガラスや樹脂、塗装面など<span class="gl" data-g="接触角">接触角</span>の小さい素材だけです。</div>
 
   <h3>環境光による分岐 ─ 決定的な問い</h3>
-  <div class="key"><p>明線が<strong>連続した線</strong>になるのは、光源が広い（＝空全体）ときだけ。<strong>点光源なら、それは線ではなく単一の<span class="gl" data-g="グリント">グリント</span>（点状の鋭いきらめき）</strong>になる。これを外すと、どれだけ丁寧に描いても嘘に見えます。</p></div>
+  <div class="key"><p>明線が<strong>連続した線</strong>になるのは、光源が広い（＝空全体）ときだけ。<strong>点光源なら、それは線ではなく単一の<span class="gl" data-g="グリント">グリント</span>（点状の鋭いきらめき）</strong>になります。これを外すと、どれだけ丁寧に描いても嘘に見えます。</p></div>
 
   <div class="tw"><table>
     <thead><tr><th>環境</th><th class="mono">明線の色</th><th>明線の性質</th></tr></thead>
@@ -846,9 +855,9 @@ input[type=range]::-moz-range-thumb{
 <!-- ============ 6 ============ -->
 <section id="s6">
   <h2><span class="num">06</span>明線か、暗線か</h2>
-  <p class="lede">明線は反射なので、明るさが物体の色にほぼ依存しない。一方、物体の明度は自由に変わる。この非対称性が全てを決めます。以下の「暗線」は、肌なら陰影・ガラスなら反射と成因が違いますが、描き分けの判断は共通です。</p>
+  <p class="lede">明線は反射なので、明るさが物体の色にほぼ依存しません。一方、物体の明度は自由に変わります。この非対称性が全てを決めます。なお「暗線」の成因は、肌なら陰影、ガラスなら反射と違いますが、描き分けの判断は共通です。</p>
 
-  <div class="key"><p>明線のコントラストは、<strong>物体が暗いほど大きい</strong>。物体が明るいと明線は物体に勝てず消え、代わりに<strong>暗線が主役</strong>になる。</p></div>
+  <div class="key"><p>明線のコントラストは、<strong>物体が暗いほど大きくなります</strong>。物体が明るいと明線は物体に勝てず消え、代わりに<strong>暗線が主役</strong>になります。</p></div>
 
   <figure>
     <svg viewBox="0 0 520 240" role="img" aria-label="物体の明度による水際表現の使い分け">
@@ -897,10 +906,10 @@ input[type=range]::-moz-range-thumb{
 <!-- ============ 7 ============ -->
 <section id="s7">
   <h2><span class="num">07</span>毛が水中で別物になる理由</h2>
-  <p class="lede">毛は水に入った瞬間に別の物体になる。形状と光学の両方が変わります。</p>
+  <p class="lede">毛は水に入った瞬間に別の物体になります。形状と光学の両方が変わります。</p>
 
   <h3>束化と、体積の激減</h3>
-  <p>水中で毛が束になるのは表面張力ではなく、<strong>毛の間の空気が抜ける</strong>から。毛同士を離していた気層が消え、接触できるようになる。房のサイズには法則があります ─ <code>房の太さ ≒ 毛の長さ × 0.2〜0.4</code>。</p>
+  <p>水中で毛が束になるのは表面張力ではなく、<strong>毛の間の空気が抜ける</strong>から。毛同士を離していた気層が消え、毛どうしが接触できるようになります。房のサイズには法則があります ─ <code>房の太さ ≒ 毛の長さ × 0.2〜0.4</code>。</p>
   <p>さらに、乾いた尻尾の体積の<strong>70〜90%は空気</strong>です。水中ではこれが水に置き換わる。</p>
 
   <figure>
@@ -968,7 +977,7 @@ input[type=range]::-moz-range-thumb{
       <text x="196" y="192" class="s-lbl-c">界面反射が 1/8 に落ちる</text>
       <defs><marker markerUnits="userSpaceOnUse" id="ar5" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="#f0a868"/></marker></defs>
     </svg>
-    <figcaption><span class="fig-n">FIG 7.2</span>毛の見た目の明るさは、<span class="gl" data-g="キューティクル">キューティクル</span>表面の反射と内部の多重散乱の合計です。水中では屈折率差が縮まって<b>界面反射が1/8になり</b>、散乱回数も激減する。結果、<b>水中の毛は空気中より圧倒的に暗く、彩度が高くなる</b>。</figcaption>
+    <figcaption><span class="fig-n">FIG 7.2</span>毛の見た目の明るさは、<span class="gl" data-g="キューティクル">キューティクル</span>表面の反射と内部の多重散乱の合計です。水中では屈折率差が縮まって<b>界面反射が1/8になり</b>、散乱回数も激減します。結果、<b>水中の毛は空気中より圧倒的に暗く、彩度が高くなります</b>。</figcaption>
   </figure>
 
   <p>毛は透明な円柱で、中に<span class="gl" data-g="メラニン">メラニン</span>という色素が散らばっています。そこに当たった光の行き先は3通りあり、それぞれ見え方が違います。</p>
@@ -982,7 +991,7 @@ input[type=range]::-moz-range-thumb{
     </tbody>
   </table></div>
 
-  <div class="key"><p>水中では表面の光沢（R）と色付き光沢（TRT）が潰れ、<strong>通り抜けてくる光（TT）だけが相対的に生き残ります</strong>。つまり<em>光沢が消え、逆光の透過光が主役になる</em>。これが水中の毛の描き方の全てです。</p></div>
+  <div class="key"><p>水中では表面の光沢（R）と色付き光沢（TRT）が潰れ、<strong>通り抜けてくる光（TT）だけが相対的に生き残ります</strong>。つまり<em>光沢が消え、逆光の透過光が主役になります</em>。これが水中の毛の描き方の全てです。</p></div>
 </section>
 
 <!-- ============ 8 ============ -->
@@ -1019,7 +1028,7 @@ input[type=range]::-moz-range-thumb{
     <tbody>
       <tr><td><b>短毛</b> 〜2cm<br><span style="color:var(--ink-3);font-size:.9em">柴犬・猫の短毛</span></td><td class="mono">3〜8mm</td><td>束化がほぼ視認できない。<b>皮膚の形が露出</b></td><td>ほぼ「濡れた皮」として扱う。シルエットは体の形そのもの</td></tr>
       <tr><td><b>中毛</b> 2〜6cm<br><span style="color:var(--ink-3);font-size:.9em">一般的な猫・犬の尻尾</span></td><td class="mono">8〜25mm</td><td><b>最も劇的に変化</b>。フサフサ → 明確な房の集合</td><td>5〜12本の房を描き分ける。房の間に暗い溝</td></tr>
-      <tr><td><b>長毛</b> 6〜20cm<br><span style="color:var(--ink-3);font-size:.9em">狐・ペルシャ・ケモノ系</span></td><td class="mono">3〜8cm</td><td>房が太く、<b>流体として揺れる</b></td><td>3〜6本の太い房。それぞれ独立してうねる</td></tr>
+      <tr><td><b>長毛</b> 6〜20cm<br><span style="color:var(--ink-3);font-size:.9em">狐やペルシャ、ケモノ系</span></td><td class="mono">3〜8cm</td><td>房が太く、<b>流体として揺れる</b></td><td>3〜6本の太い房。それぞれ独立してうねる</td></tr>
       <tr><td><b>極長</b> 20cm〜<br><span style="color:var(--ink-3);font-size:.9em">馬の尾・ファンタジー</span></td><td class="mono">5〜15cm</td><td>房の先端がさらに分岐する二次構造</td><td>主要な房＋先端の細い分岐。先端ほど広がる</td></tr>
     </tbody>
   </table></div>
@@ -1053,7 +1062,7 @@ input[type=range]::-moz-range-thumb{
         <marker markerUnits="userSpaceOnUse" id="ar7" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="#58cfe4"/></marker>
       </defs>
     </svg>
-    <figcaption><span class="fig-n">FIG 8.1</span>水中の長毛は<b>水平方向に広がり、動きに対して遅れて追従する</b>。毛は動きの履歴を描き、先端ほど遅れが大きい。水中の尻尾を空気中と同じように下向きに描いてはいけません。ふわりと水平に漂わせるだけで水中感が跳ね上がります。</figcaption>
+    <figcaption><span class="fig-n">FIG 8.1</span>水中の長毛は<b>水平方向に広がり、動きに対して遅れて追従する</b>。毛は動きの履歴を描き、先端ほど遅れが大きくなります。水中の尻尾を空気中と同じように下向きに描いてはいけません。ふわりと水平に漂わせるだけで水中感が跳ね上がります。</figcaption>
   </figure>
 </section>
 
@@ -1063,7 +1072,7 @@ input[type=range]::-moz-range-thumb{
   <p class="lede">毛では、水際の描き方が肌とは根本的に変わります。</p>
 
   <h3>連続した線ではなく、点列になる</h3>
-  <p>毛は細く接触角も大きいので、きれいな連続メニスカスができません。代わりに<strong>毛1本ごと、あるいは房ごとに個別の小さなメニスカス</strong>ができる。</p>
+  <p>毛は細く接触角も大きいので、きれいな連続メニスカスができません。代わりに<strong>毛1本ごと、あるいは房ごとに個別の小さなメニスカス</strong>ができます。</p>
 
   <figure>
     <svg viewBox="0 0 520 165" role="img" aria-label="肌と毛の水際の違い">
@@ -1195,7 +1204,7 @@ input[type=range]::-moz-range-thumb{
   <p>水（n=1.333）から空気（n=1.0）へ、つまり<strong>密から疎へ向かう光</strong>は、入射角が臨界角を超えると1%も透過せず全部跳ね返ります。</p>
   <p>臨界角は <code>asin(1 ÷ 1.333) = 48.6°</code>。ここで効いてくるのが、<strong>sin(48.6°) = 0.75 ちょうど</strong>という関係です。これが作画ルールを驚くほど単純にします。</p>
 
-  <div class="key"><p>反射率100%は、銀（約95%）やアルミ（約90%）よりも高い。<strong>気泡は自然界で最も完全な鏡</strong>です。だから絵の中で「最も明るいもの」になる資格がある ── というより、<em>ここ以外を純白にしてはいけない</em>くらいの位置づけになります。</p></div>
+  <div class="key"><p>反射率100%は、銀（約95%）やアルミ（約90%）よりも高い値です。<strong>気泡は自然界で最も完全な鏡</strong>です。だから絵の中で「最も明るいもの」になる資格があります。というより、<em>ここ以外を純白にしてはいけない</em>くらいです。</p></div>
 
   <figure>
     <svg viewBox="0 0 520 300" role="img" aria-label="気泡の全反射が起きる範囲と見え方">
@@ -1255,7 +1264,7 @@ input[type=range]::-moz-range-thumb{
       <text x="292" y="284" class="s-tiny">見かけの面積では44%を占める</text>
       <defs><marker markerUnits="userSpaceOnUse" id="arS" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="#f0a868"/></marker></defs>
     </svg>
-    <figcaption><span class="fig-n">FIG 10.1</span>視線に正対する中心部は入射角0°なので<b>ほとんど透過し、背後が透けて見えます</b>。外に行くほど入射角が増え、<code>r = 0.75R</code> で臨界角に達して一気に100%になる。つまり気泡は<b>中心が透明で、外周だけが銀色のリング</b>。プラスチック球のハイライトが中心寄りに来るのとは正反対です。</figcaption>
+    <figcaption><span class="fig-n">FIG 10.1</span>視線に正対する中心部は入射角0°なので<b>ほとんど透過し、背後が透けて見えます</b>。外に行くほど入射角が増え、<code>r = 0.75R</code> で臨界角に達して一気に100%になります。つまり気泡は<b>中心が透明で、外周だけが銀色のリング</b>。プラスチック球のハイライトが中心寄りに来るのとは正反対です。</figcaption>
   </figure>
 
   <h3>内縁は事実上ハードエッジ</h3>
@@ -1273,7 +1282,7 @@ input[type=range]::-moz-range-thumb{
     </tbody>
   </table></div>
 
-  <div class="key"><p>14%から100%への立ち上がりが、半径のうち <code>0.71R 〜 0.75R</code> ── <strong>わずか4%の幅に収まっています</strong>。だから銀色リングの内側の縁は<em>ぼかしてはいけない</em>。1〜2pxのハードエッジが正解です。外側は輪郭そのものなので、これもシャープ。<strong>この光沢は上下ともシャープ</strong>という点で、他のハイライトと決定的に違います。</p></div>
+  <div class="key"><p>14%から100%への立ち上がりが、半径のうち <code>0.71R 〜 0.75R</code>、<strong>わずか4%の幅に収まっています</strong>。だから銀色リングの内側の縁は<em>ぼかしてはいけません</em>。1〜2pxのハードエッジが正解です。外側は輪郭そのものなので、これもシャープ。<strong>この光沢は上下ともシャープ</strong>という点で、他のハイライトと決定的に違います。</p></div>
 
   <h3>色 ─ 白ではなく「環境を映した白」</h3>
   <p>完全な鏡ということは、<strong>自分では色を持たない</strong>ということです。映しているのは水中の環境で、その大半は「明るい水面の方向」と「暗い水中の方向」。</p>
@@ -1347,7 +1356,7 @@ input[type=range]::-moz-range-thumb{
   <ol class="chk">
     <li><span class="n">01</span><span>先に<b>房や物体のシルエットを確定</b>させる。銀色は輪郭に貼り付くので、輪郭が決まらないと置けない</span></li>
     <li><span class="n">02</span><span>加算(発光)レイヤーに、<b><span class="gl" data-g="アンチエイリアス">アンチエイリアス</span>の弱い硬めのブラシ</b>で、不透明度100%で輪郭に沿って線を引く</span></li>
-    <li><span class="n">03</span><span><b>必ず途切れさせる</b>。全周に均一な線を回すと嘘になる。房の隙間、水流の当たる側で切る</span></li>
+    <li><span class="n">03</span><span><b>必ず途切れさせる</b>。全周に均一な線を回すと嘘になります。房の隙間や、水流の当たる側で切る</span></li>
     <li><span class="n">04</span><span>個別の気泡は<b>満月ではなく三日月</b>で描く。円を塗りつぶさず、外周の弧だけ。向きは水面側で揃える</span></li>
     <li><span class="n">05</span><span>大きめの気泡だけ、<b>内側に暗い縁</b>を1px入れる。透過部との境界がここでコントラストを作る</span></li>
     <li><span class="n">06</span><span>最後に、水面へ立ち上る<b>抜けていく気泡</b>を数個。これで時間が生まれる</span></li>
@@ -1355,12 +1364,12 @@ input[type=range]::-moz-range-thumb{
 
   <h3>同じ原理が使える場所</h3>
   <ul>
-    <li><b>白波・水しぶき・泡</b> ── 泡が白いのは顔料ではなく、無数の水と空気の界面がそれぞれ全反射しているから。だから<b>泡は影の中でも白い</b></li>
-    <li><b>飲み物の中の気泡</b> ── グラスの炭酸、ビールの泡。同じ三日月の集合</li>
-    <li><b>氷の中の気泡</b> ── 氷が白く濁って見える理由。氷（n=1.31）と空気でもほぼ同じ臨界角</li>
-    <li><b>水中から見上げた水面</b> ── 臨界角48.6°の円（<span class="gl" data-g="スネルの窓">スネルの窓</span>）の外側は、水面が完全な鏡になって水底を映す</li>
-    <li><b>水着や布に入り込んだ空気</b> ── 入水直後、布の膨らみが銀色に縁取られる</li>
-    <li><b>水生昆虫・カワウソなどの毛</b> ── 毛が保持する空気層。同じ表現がそのまま使える</li>
+    <li><b>白波や水しぶき、泡</b>。泡が白いのは顔料ではなく、無数の水と空気の界面がそれぞれ全反射しているから。だから<b>泡は影の中でも白い</b></li>
+    <li><b>飲み物の中の気泡</b>。グラスの炭酸、ビールの泡。同じ三日月の集合</li>
+    <li><b>氷の中の気泡</b>。氷が白く濁って見える理由。氷（n=1.31）と空気でもほぼ同じ臨界角</li>
+    <li><b>水中から見上げた水面</b>。臨界角48.6°の円（<span class="gl" data-g="スネルの窓">スネルの窓</span>）の外側は、水面が完全な鏡になって水底を映す</li>
+    <li><b>水着や布に入り込んだ空気</b>。入水直後、布の膨らみが銀色に縁取られる</li>
+    <li><b>水生昆虫やカワウソの毛</b>。毛が保持する空気層。同じ表現がそのまま使える</li>
   </ul>
 
   <div class="bad"><b>起きやすい失敗　</b>①リング全体を均一な純白のベタで塗る（水面側と水中側で明るさが違う）／②内縁をぼかす（立ち上がりは半径の4%に収まるハードエッジ）／③気泡を白い円で塗りつぶす（中心は透ける）／④影の中で消してしまう（鏡なので光源に依存しない）／⑤覆い焼きで塗ろうとする（黒の上では効かない）</div>
@@ -1384,7 +1393,7 @@ input[type=range]::-moz-range-thumb{
   </div>
 
   <h3>毛の減光</h3>
-  <p>毛の減光は「光沢の消失」が本質なので、<strong>乗算1枚では足りません</strong>。</p>
+  <p>毛が暗くなるのは、主に光沢が消えるからです。だから<strong>乗算1枚では足りません</strong>。</p>
   <div class="stack">
     <div class="ly"><span class="i">04</span><span class="d"><b>散乱ベール</b><span>暗い物体はコントラストが高いので、深部ほど急速に水色に溶ける</span></span><span class="m">通常</span></div>
     <div class="ly"><span class="i">03</span><span class="d"><b>彩度上げ</b><span>茶・赤系のみ。毛色そのものを乗せる</span></span><span class="m">オーバーレイ 20-30%</span></div>
@@ -1392,7 +1401,7 @@ input[type=range]::-moz-range-thumb{
     <div class="ly"><span class="i">01</span><span class="d"><b>光沢除去</b><span>乾いた状態のハイライトを潰す。ここが最重要</span></span><span class="m">乗算 / 焼きこみカラー</span></div>
   </div>
 
-  <div class="bad"><b>焼きこみについて　</b>焼きこみカラーは「暗くしながら彩度を上げる」ので、赤が抜けてシアンの彩度が上がる水の挙動と方向性は一致します。ただし暗部が急速に潰れて肌の陰影がベタッと死ぬ。<b>乗算＋ベールの2枚構成のほうが物理的にも正確で調整もしやすい</b>。使うなら最深部に不透明度20%程度がスパイスとしての限度です。</div>
+  <div class="bad"><b>焼きこみについて　</b>焼きこみカラーは「暗くしながら彩度を上げる」ので、赤が抜けてシアンの彩度が上がる水の挙動と方向性は一致します。ただし暗部が急速に潰れて肌の陰影がベタッと死ぬ。<b>乗算＋ベールの2枚構成のほうが物理的にも正確で調整もしやすい</b>。使うなら、最深部に不透明度20%程度が限度です。</div>
 </section>
 
 <!-- ============ 12 : applied example ============ -->
@@ -1405,7 +1414,7 @@ input[type=range]::-moz-range-thumb{
   <div class="console">
     <div class="console-hd">
       <span class="t">FLOATING SUBJECT</span>
-      <span class="s">伏角を動かすと、浮き輪の楕円・水中の見え・鏡像が連動します</span>
+      <span class="s">伏角を動かすと、浮き輪の楕円と水中の見え方、鏡像が連動します</span>
     </div>
     <div class="console-bd">
       <div class="ctrl">
@@ -1433,7 +1442,7 @@ input[type=range]::-moz-range-thumb{
       <tr><td><b>40°</b><br><span style="color:var(--ink-3);font-size:.9em">標準</span></td><td class="mono">3.4%</td><td class="mono">0.59×</td><td><b>全部入り</b>。水際の明線が最も効く。水中も見え、鏡像もうっすら出る。絵として一番おいしい</td><td>なし</td></tr>
       <tr><td><b>25°</b><br><span style="color:var(--ink-3);font-size:.9em">転換点</span></td><td class="mono">8.7%</td><td class="mono">0.43×</td><td>鏡像と水中が<b>拮抗</b>する。浮き輪の楕円が細くなり、キャラは横向きの見え方に。水面の映り込みを描き始める</td><td>水中のディテール（脚は輪郭だけ）／コースティクス</td></tr>
       <tr><td><b>15°</b></td><td class="mono">21.2%</td><td class="mono">0.28×</td><td><b>鏡像が主役</b>。水面が鏡になり始める。接触点0の鏡像を丁寧に</td><td>水中はほぼ全部／明線（明るい水面に埋もれる）</td></tr>
-      <tr><td><b>8°</b><br><span style="color:var(--ink-3);font-size:.9em">すれすれ</span></td><td class="mono">42.7%</td><td class="mono">0.16×</td><td>水面は<b>ほぼ鏡</b>。長く伸びた鏡像と、波によるその分断だけで水を表現する</td><td>水中・明線・焦線・コースティクスすべて</td></tr>
+      <tr><td><b>8°</b><br><span style="color:var(--ink-3);font-size:.9em">すれすれ</span></td><td class="mono">42.7%</td><td class="mono">0.16×</td><td>水面は<b>ほぼ鏡</b>。長く伸びた鏡像と、波によるその分断だけで水を表現する</td><td>水中と明線、焦線、コースティクスすべて</td></tr>
     </tbody>
   </table></div>
 
@@ -1443,14 +1452,14 @@ input[type=range]::-moz-range-thumb{
   <div class="tw"><table>
     <thead><tr><th>部位・素材</th><th class="mono">接触角</th><th class="mono">β最大</th><th>水際の描き方</th></tr></thead>
     <tbody>
-      <tr><td><b>濡れた肌</b>（腕・肩・胴）</td><td class="mono">55°</td><td class="mono">35°</td><td><b>明線が出る</b>。細く鋭い高輝度線＋その下に陰影の暗帯</td></tr>
+      <tr><td><b>濡れた肌</b>（腕や肩、胴）</td><td class="mono">55°</td><td class="mono">35°</td><td><b>明線が出る</b>。細く鋭い高輝度線＋その下に陰影の暗帯</td></tr>
       <tr><td><b>濡れた髪</b></td><td class="mono">60°</td><td class="mono">30°</td><td>出るが、毛は房ごとなので<b>連続線ではなく点列</b>（§09）</td></tr>
       <tr><td><b>ビニールの浮き輪</b>（PVC）</td><td class="mono">85°</td><td class="mono">5°</td><td><b>明線はほぼ出ない</b>。水が這い上がらないので、水際は素材色がそのまま切り替わるだけ</td></tr>
       <tr><td><b>撥水加工の水着</b></td><td class="mono">95°</td><td class="mono">—</td><td>水が逆に凹む。明線なし。<b>水玉が転がる</b>表現のほうが効く</td></tr>
     </tbody>
   </table></div>
 
-  <div class="key"><p>つまり同じ水面ラインでも、<strong>肌の部分には明線を引き、浮き輪の周囲には引かない</strong>。全周に均一な白線を回すと、素材の違いが消えて一気に嘘くさくなります。逆に言えば、この描き分けだけで「ビニールらしさ」と「肌らしさ」が同時に出ます。</p></div>
+  <div class="key"><p>つまり同じ水面ラインでも、<strong>肌の部分には明線を引き、浮き輪の周囲には引きません</strong>。全周に均一な白線を回すと、素材の違いが消えて一気に嘘くさくなります。逆に言えば、この描き分けだけで「ビニールらしさ」と「肌らしさ」が同時に出ます。</p></div>
 
   <h3>鏡像の作図ルール</h3>
   <p>25°より低い伏角では鏡像が主役になりますが、ここが最も間違えやすい。<strong>鏡像は上下反転コピーではありません</strong>。</p>
@@ -1484,11 +1493,11 @@ input[type=range]::-moz-range-thumb{
       <text x="20" y="146" class="s-lbl-a" text-anchor="end">接触点</text>
       <text x="20" y="160" class="s-lbl-a" text-anchor="end">隙間は0</text>
     </svg>
-    <figcaption><span class="fig-n">FIG 12.1</span>鏡像は、<b>水面をはさんで反転した位置のカメラから見た像</b>です。だから実物で上面が見えているなら、鏡像では底面が見える。浮き輪なら、実物は上のふくらみとその陰影、鏡像は<b>水に接した下面</b>で、多くの場合そちらのほうが暗く陰も逆向きです。単純に上下反転コピーして不透明度を下げたものは、この点で必ず破綻します。</figcaption>
+    <figcaption><span class="fig-n">FIG 12.1</span>鏡像は、<b>水面をはさんで反転した位置のカメラから見た像</b>です。だから実物で上面が見えているなら、鏡像では底面が見えます。浮き輪なら、実物は上のふくらみとその陰影、鏡像は<b>水に接した下面</b>で、多くの場合そちらのほうが暗く陰も逆向きです。単純に上下反転コピーして不透明度を下げたものは、この点で必ず破綻します。</figcaption>
   </figure>
 
   <ul>
-    <li><b>接触点の隙間は0</b>。実物と鏡像は水面ラインで必ず接する。ここに隙間があると浮遊して見える</li>
+    <li><b>接触点の隙間は0</b>。実物と鏡像は水面ラインで必ず接します。ここに隙間があると浮遊して見える</li>
     <li><b>画面上の長さは、水面より上の見えている高さと同じ</b>。伏角が浅いほど実物も鏡像も縦に長くなる</li>
     <li><b>波による分断は距離に比例</b>。手前の鏡像（＝接触点付近）はほぼ連続、遠い部分ほど横縞に千切れる</li>
     <li><b>鏡像は実物よりコントラストが低い</b>。水中の暗さが下地に乗るので、ハイライトは残り暗部は持ち上がる</li>
@@ -1532,7 +1541,7 @@ input[type=range]::-moz-range-thumb{
     </tbody>
   </table></div>
 
-  <div class="key"><p>窓の角度サイズは<strong>深さによらず常に97.2°</strong>。変わるのは「窓が水面上のどれだけ広い範囲をカバーするか」だけです。そして窓が占めるのは上向き視野の<em><span class="gl" data-g="立体角">立体角</span>で33.9%</em> ── 見上げた視界の2/3は鏡だということになります。</p></div>
+  <div class="key"><p>窓の角度サイズは<strong>深さによらず常に97.2°</strong>。変わるのは「窓が水面上のどれだけ広い範囲をカバーするか」だけです。そして窓が占めるのは上向き視野の<em><span class="gl" data-g="立体角">立体角</span>で33.9%</em>で、見上げた視界の2/3は鏡だということになります。</p></div>
 
   <div class="console">
     <div class="console-hd">
@@ -1590,7 +1599,7 @@ input[type=range]::-moz-range-thumb{
       <tr><td><b>鏡像の明るさ</b></td><td>薄い。下地が透けて混ざる</td><td><b>完全。混ざりものなし</b></td></tr>
       <tr><td><b>鏡像のエッジ</b></td><td>やわらかい</td><td><b>シャープ</b></td></tr>
       <tr><td><b>境界</b></td><td>徐々に変化する</td><td>48.6°で<b>不連続に切り替わる</b></td></tr>
-      <tr><td><b>映るもの</b></td><td>空</td><td><b>水中の風景・自分の体・水底</b></td></tr>
+      <tr><td><b>映るもの</b></td><td>空</td><td><b>水中の風景や自分の体、水底</b></td></tr>
     </tbody>
   </table></div>
 
@@ -1666,7 +1675,7 @@ input[type=range]::-moz-range-thumb{
 <!-- ============ 15 : waves ============ -->
 <section id="s15">
   <h2><span class="num">14</span>波がつくる明暗</h2>
-  <p class="lede">波打つ水面は、光を集めもするし、反射像を引き伸ばしもする。どちらも「面の傾き」だけで説明がつきます。</p>
+  <p class="lede">波打つ水面は、光を集めもすれば、反射像を引き伸ばしもします。どちらも「面の傾き」だけで説明がつきます。</p>
 
   <h3>集光 ─ 波の山はレンズになる</h3>
   <p>水面が平らでないとき、局所的な曲面が<strong>レンズとして働きます</strong>。水は空気より屈折率が大きいので、上に凸な部分（波の山）は<strong><span class="gl" data-g="凸レンズ">凸レンズ</span>＝<span class="gl" data-g="集光">集光</span></strong>、下に凸な部分（谷）は<strong><span class="gl" data-g="凹レンズ">凹レンズ</span>＝発散</strong>になります。</p>
@@ -1674,20 +1683,21 @@ input[type=range]::-moz-range-thumb{
   <div class="key"><p>だから水中にできる網目模様は、<strong>明るい線を「足した」もの</strong>です。暗い部分は影ではなく、<em>単に光が集まっていないだけの素の明るさ</em>。ここを影の色で塗ると、絵が濁ります。</p></div>
 
   <h3>焦点深度 ─ 最も鮮明になる深さがある</h3>
-  <p>レンズなので<strong>焦点があります</strong>。<span class="gl" data-g="振幅">振幅</span> a、<span class="gl" data-g="波長">波長</span> λ の波の山の<span class="gl" data-g="曲率半径">曲率半径</span>は <code>R = λ² / (4π²a)</code>、そこから水中の焦点までは <code>f = 4R</code>。つまり:</p>
+  <p>レンズなので<strong>焦点があります</strong>。<span class="gl" data-g="振幅">振幅</span> a、<span class="gl" data-g="波長">波長</span> λ の波の山の<span class="gl" data-g="曲率半径">曲率半径</span>を R とすると、水中の焦点までは <code>f = 4R</code>。</p>
+  <p>ここで注意が要ります。実際の水の波は<strong>正弦波ではありません</strong>。ある程度の高さになると<em>山が尖り、谷が平らになる</em>ストークス波の形になり、山の曲率が正弦波よりずっときつくなります。それを含めた式が <code>R = λ² / (4π²a(1+2ka))</code>（ka = 2πa/λ）。<strong>正弦波で計算すると焦点深度を1.6〜1.9倍も深く見積もってしまう</strong>ので、この資料では全てストークス波で計算しています。</p>
 
   <div class="tw"><table>
     <thead><tr><th class="mono">波長</th><th class="mono">振幅</th><th class="mono">曲率半径 R</th><th class="mono">焦点深度 f</th><th>典型的な場面</th></tr></thead>
     <tbody>
-      <tr><td class="mono">5cm</td><td class="mono">0.3cm</td><td class="mono">2.1cm</td><td class="mono">8cm</td><td>指で立てたさざ波</td></tr>
-      <tr><td class="mono">10cm</td><td class="mono">0.5cm</td><td class="mono">5.1cm</td><td class="mono">20cm</td><td>プールの細かい波</td></tr>
-      <tr><td class="mono">20cm</td><td class="mono">1cm</td><td class="mono">10cm</td><td class="mono">41cm</td><td>人が動いてできる波</td></tr>
-      <tr><td class="mono">50cm</td><td class="mono">3cm</td><td class="mono">21cm</td><td class="mono">85cm</td><td>やや大きなうねり</td></tr>
-      <tr><td class="mono">100cm</td><td class="mono">6cm</td><td class="mono">42cm</td><td class="mono">169cm</td><td>海のうねり</td></tr>
+      <tr><td class="mono">5cm</td><td class="mono">0.3cm</td><td class="mono">1.2cm</td><td class="mono">5cm</td><td>指で立てたさざ波</td></tr>
+      <tr><td class="mono">10cm</td><td class="mono">0.5cm</td><td class="mono">3.1cm</td><td class="mono">12cm</td><td>プールの細かい波</td></tr>
+      <tr><td class="mono">20cm</td><td class="mono">1cm</td><td class="mono">6.2cm</td><td class="mono">25cm</td><td>人が動いてできる波</td></tr>
+      <tr><td class="mono">50cm</td><td class="mono">3cm</td><td class="mono">12cm</td><td class="mono">48cm</td><td>やや大きなうねり</td></tr>
+      <tr><td class="mono">100cm</td><td class="mono">6cm</td><td class="mono">24cm</td><td class="mono">96cm</td><td>海のうねり</td></tr>
     </tbody>
   </table></div>
 
-  <div class="key"><p>焦点深度より<strong>浅くても深くても、網目はぼやけます</strong>。プールの細かい波なら焦点は20cm前後なので、<em>膝や太ももにはシャープな網目が乗り、1.5mの底ではぼやけて広がる</em>。同じ絵の中で鮮明さが変わるのが正解です。</p></div>
+  <div class="key"><p>焦点深度より<strong>浅くても深くても、網目はぼやけます</strong>。プールの細かい波なら焦点は10〜25cmなので、<em>膝や太ももにはシャープな網目が乗り、1.5mの底ではぼやけて広がる</em>。同じ絵の中で鮮明さが変わるのが正解です。</p></div>
 
   <div class="console">
     <div class="console-hd">
@@ -1695,6 +1705,7 @@ input[type=range]::-moz-range-thumb{
       <span class="s">実際に光線を追跡しています。網目が集まる深さが変わります</span>
     </div>
     <div class="console-bd">
+      <svg id="wprof" viewBox="0 0 520 150" role="img" aria-label="波の断面プロファイル"></svg>
       <div class="ctrl">
         <label for="cwl"><span>波長</span><span class="v" id="cwlV">10 cm</span></label>
         <input type="range" id="cwl" min="40" max="800" value="100" step="5">
@@ -1702,24 +1713,51 @@ input[type=range]::-moz-range-thumb{
       <div class="ctrl">
         <label for="cam"><span>振幅</span><span class="v" id="camV">0.5 cm</span></label>
         <input type="range" id="cam" min="1" max="80" value="5" step="1">
+        <p style="margin:.35rem 0 0;font-size:.72rem;color:var(--ink-3)">
+          <span id="cLim">この波長での振幅の上限は 0.71 cm</span>　／
+          <span class="gl" data-g="急峻さ">急峻さ</span>が 0.071 を超えると波は砕けるため、そこで止まります。</p>
       </div>
       <svg id="caus" viewBox="0 0 520 350" role="img" aria-label="波打つ水面による光の集光と発散の光線追跡"></svg>
       <div class="readout">
         <div class="rd"><span class="k">曲率半径 R</span><span class="n warm" id="cR">5.1 cm</span></div>
         <div class="rd"><span class="k">焦点深度 f</span><span class="n" id="cF">20 cm</span></div>
         <div class="rd"><span class="k">網目の間隔</span><span class="n warm" id="cP">10 cm</span></div>
-        <div class="rd"><span class="k">波の急峻さ</span><span class="n warm" id="cS">0.050</span></div>
+        <div class="rd"><span class="k">急峻さ / 限界</span><span class="n warm" id="cS">0.050 / 0.071</span></div>
       </div>
       <div class="verdict"><b>読み取り方</b>上から平行に降る光を、波打つ水面で屈折させて追跡しています。<b>線が密集する場所が明るい網目、まばらな場所が暗い部分</b>。焦点深度（水色の線）でいちばん細く鋭くなり、そこから離れるほど広がってぼやけるのが見て取れます。網目の間隔は波長そのものです。</div>
     </div>
   </div>
+
+  <h3>砕波 ─ 波の高さには限界がある</h3>
+  <p>コンソールの振幅スライダーは、ある値で止まります。壊れているのではなく、<strong>それ以上高い波は存在できない</strong>からです。</p>
+
+  <div class="key"><p>波の高さ H と波長 λ の比が <code>1/7 ≒ 0.143</code> に達すると、<strong>山の頂点が120°の角になり、そこで水は自重を支えきれずに崩れます</strong>。これがストークスの限界波。振幅で言えば <code>a/λ = 1/14 ≒ 0.071</code> です。</p></div>
+
+  <p>限界に近づくほど山は尖り、谷は平らに広がります。コンソール上部の断面図で、山に接する<span class="gl" data-g="曲率半径">曲率半径</span>の円が急速に小さくなるのが見えるはずです。<strong>この円が縮むことが、そのまま焦点が浅くなること</strong>を意味します。</p>
+
+  <h3>浅いところではもっと早く砕ける</h3>
+  <p>水深が浅い場所では、上の限界に達する前に砕けます。目安は <code>波高 ≒ 0.78 × 水深</code>。</p>
+
+  <div class="tw"><table>
+    <thead><tr><th class="mono">水深</th><th class="mono">砕け始める波高</th><th>場面</th></tr></thead>
+    <tbody>
+      <tr><td class="mono">20cm</td><td class="mono">16cm</td><td>波打ち際。足首程度の深さ</td></tr>
+      <tr><td class="mono">50cm</td><td class="mono">39cm</td><td>膝丈。子供用プール</td></tr>
+      <tr><td class="mono">1m</td><td class="mono">78cm</td><td>腰から胸の深さ</td></tr>
+      <tr><td class="mono">2m</td><td class="mono">1.6m</td><td>ここまでは通常のプールでは砕けない</td></tr>
+    </tbody>
+  </table></div>
+
+  <p>だから<strong>波が砕けるのは、沖ではなく浅くなった場所</strong>です。波打ち際で白波が立ち、沖では立たないのはこのため。絵の中で白波の位置を決めるときの基準になります。</p>
+
+  <div class="key"><p>砕けた波が白いのは、<strong>大量の空気を巻き込むから</strong>。ひとつひとつの気泡が§10の全反射で完全な鏡になり、それが何層にも重なって光を返します。だから<em>白波は影の中でも白い</em>し、絵の中で最も明るいものになる資格があります。</p></div>
 
   <h3>コースティクスを描くときの決まりごと</h3>
   <ul>
     <li><b>直射日光が要る。</b>点に近い光源でないと集光しません。<em>曇天ではコースティクスは出ません</em>。§05の「点光源ならグリント」と同じ理屈です</li>
     <li><b>網目の間隔は波長そのもの。</b>波1つにつき明線1本。波の間隔と網目の間隔がずれていたら嘘になります</li>
     <li><b>明線を足す。暗部は塗らない。</b>加算（発光）レイヤーで明線だけを足し、下地はそのまま</li>
-    <li><b>上を向いた面にだけ乗る。</b>光は上から来るので、太ももの表・足の甲・肩には強く、側面には弱く、下向きの面には出ません</li>
+    <li><b>上を向いた面にだけ乗る。</b>光は上から来るので、太ももの表や足の甲、肩には強く、側面には弱く、下向きの面には出ません</li>
     <li><b>体の上では網目が歪む。</b>平らな底のような整った網にはならず、曲面に沿って断片的に途切れます</li>
     <li><b>波と一緒に動く。</b>連続したコマや動画なら、模様は波の進行方向へ流れます</li>
     <li><b>水面の上にも出る。</b>プールサイドの壁や、水辺の人物の顎の下で揺れる光も同じ現象です</li>
@@ -1829,7 +1867,7 @@ input[type=range]::-moz-range-thumb{
 
 <div class="foot">
   <p>屈折率 n=1.333、純水の吸収係数 赤0.40／緑0.06／青0.015 m⁻¹、水の表面張力 0.072 N/m、ケラチンの屈折率 1.55 を用いて計算。見かけの深さは球欠面の式 <code>d′/d = cosθa /(n·cosθw)</code>、反射率は非偏光フレネル式によりページ内で算出しています。</p>
-  <p>臨界角は <code>asin(1/1.333) = 48.6°</code>。<code>sin(48.6°) = 0.75</code> なので、気泡の銀色に光る範囲は半径の外側1/4に一致し、水中から見上げたときのスネルの窓は上向き視野の立体角の33.9%を占めます。屈折による変形は深さ方向の一様なスケールであり、直線と平行を保つアフィン変換です。波の山の曲率半径は <code>R = λ²/(4π²a)</code>、水中の焦点は単一屈折面の式から <code>f = 4R</code>。コースティクスの図は模式図ではなく、水面の各点でスネルの法則を解いて光線を追跡したものです。3Dビューアの投影は遠近感をつけない平行投影で、カメラの伏角と方位角から基底ベクトルを組んで計算しています。</p>
+  
 </div>
 </main>
 </div>
@@ -2542,6 +2580,7 @@ var GLOSS={
 'キューティクル':'毛の表面を覆う、うろこ状の透明な層。光沢の元になります。',
 'スネルの窓':'水中から見上げたときに、水面上の世界すべてが集まって見える円形の範囲。半角48.6°です。',
 'ゴッドレイ':'水中や空気中の散乱によって、光の筋が目に見えるようになった状態。光芒とも呼びます。',
+'急峻さ':'波の高さと波長の比。値が大きいほど尖った波です。0.071 を超えると波は砕けてしまい、存在できません。',
 '曲率半径':'面のカーブのきつさを、同じ丸みを持つ円の半径で表したもの。値が小さいほど急なカーブです。',
 '焦点深度':'レンズが光を最も細く集める距離。波の山がレンズになるので、水中にもこの深さが存在します。',
 '光線追跡':'光の道筋を1本ずつ計算で追いかける方法。この資料の集光の図は模式図ではなく、実際にこの計算をしています。',
@@ -2595,14 +2634,68 @@ function initGloss(){
   window.addEventListener('resize',hide);
 }
 
+
+/* ---------- wave profile preview ---------- */
+function drawProfile(lam,amp){
+  var s=$('wprof'); while(s.firstChild)s.removeChild(s.firstChild);
+  var W=520,H=150, MID=74, k=2*Math.PI/lam, ka=k*amp;
+  var steep=amp/lam, ratio=Math.min(steep/(1/14),1);
+  var SPAN=1.6;                                   // 画面に入れる波の数
+  var vs=W/(SPAN*lam), xs=1/vs;                   // 等方スケール
+  var R=lam*lam/(4*Math.PI*Math.PI*amp*(1+2*ka)); // 山の曲率半径(cm)
+  function z(x){ return amp*(Math.cos(k*x)+ka/2*Math.cos(2*k*x)); }
+  function tx(x,y,c,str,an){var t=el('text',{x:x,y:y,'class':c});if(an)t.setAttribute('text-anchor',an);t.textContent=str;s.appendChild(t)}
+
+  s.appendChild(el('rect',{x:0,y:0,width:W,height:H,fill:'#101c22'}));
+  var d='';
+  for(var px=0;px<=W;px+=2){
+    var x=(px-W/2)*xs;
+    d+=(d?'L':'M')+px+' '+(MID-z(x)*vs).toFixed(1)+' ';
+  }
+  s.appendChild(el('path',{d:d+'L'+W+' '+H+' L0 '+H+' Z',fill:'#1b4250','fill-opacity':'.8'}));
+  s.appendChild(el('line',{x1:0,y1:MID,x2:W,y2:MID,stroke:'#33484f','stroke-width':.9,'stroke-dasharray':'4 4'}));
+
+  // 山の曲率円（これが縮むほど光が強く集まる）
+  var cx=W/2, top=MID-z(0)*vs, Rpx=R*vs;
+  s.appendChild(el('circle',{cx:cx,cy:top+Rpx,r:Rpx,fill:'none',stroke:'#f0a868','stroke-width':1.3,
+    'stroke-dasharray':'5 4',opacity:'.9'}));
+  if(Rpx<H*1.2){
+    s.appendChild(el('line',{x1:cx,y1:top,x2:cx,y2:top+Rpx,stroke:'#f0a868','stroke-width':1,opacity:'.8'}));
+    tx(cx+6,top+Rpx/2+4,'s-lbl-a','R');
+  }
+  s.appendChild(el('path',{d:d,fill:'none',stroke:'#58cfe4','stroke-width':2.2}));
+
+  // 波高
+  var bot=MID-z(lam/2)*vs, hx=cx+W*0.28;
+  s.appendChild(el('line',{x1:hx,y1:top,x2:hx,y2:bot,stroke:'#9fd67a','stroke-width':1.2}));
+  s.appendChild(el('path',{d:'M'+(hx-3)+' '+(top+5)+' L'+hx+' '+top+' L'+(hx+3)+' '+(top+5)+
+    ' M'+(hx-3)+' '+(bot-5)+' L'+hx+' '+bot+' L'+(hx+3)+' '+(bot-5),stroke:'#9fd67a',fill:'none','stroke-width':1}));
+  tx(hx+7,(top+bot)/2+4,'s-lbl-b','H');
+
+  // 砕波ゲージ
+  var gx=14,gy=H-16,gw=176;
+  s.appendChild(el('rect',{x:0,y:H-52,width:W,height:52,fill:'#0b1418',opacity:'.88'}));
+  s.appendChild(el('rect',{x:gx,y:gy-7,width:gw,height:8,rx:4,fill:'#22323a'}));
+  s.appendChild(el('rect',{x:gx,y:gy-7,width:(gw*ratio).toFixed(1),height:8,rx:4,
+    fill:ratio>0.94?'#e0687a':(ratio>0.7?'#f0a868':'#58cfe4')}));
+  tx(gx+gw+10,gy,'s-tiny',ratio>=0.995?'砕波の限界に到達':'砕波まで あと'+Math.round((1-ratio)*100)+'%');
+  tx(gx,gy-15,'s-tiny','H / λ = '+(2*steep).toFixed(3)+'　（限界 0.143）');
+  tx(14,24,'s-lbl-c','波の断面（等倍・波1.6個分）');
+  tx(W-14,24,'s-lbl-a','山の曲率半径 R = '+R.toFixed(1)+' cm','end');
+  tx(W-14,38,'s-tiny','この円が小さいほど光が強く集まる','end');
+}
+
 /* ---------- wave caustics : real ray tracing ---------- */
 function drawCaustics(lam,amp){
   var s=$('caus'); while(s.firstChild)s.removeChild(s.firstChild);
   var SY=76, H=350, W=520;
-  var R=lam*lam/(4*Math.PI*Math.PI*amp), F=R*1.333/0.333;
+  var kk0=2*Math.PI/lam*amp;
+  var R=lam*lam/(4*Math.PI*Math.PI*amp*(1+2*kk0)), F=R*1.333/0.333;
   // 等方スケール：焦点が水域の62%に来るように
   var pc=(H-SY)*0.62/F;
-  var k=2*Math.PI/lam, eta=1/N;
+  var k=2*Math.PI/lam, eta=1/N, ka=k*amp;
+  function prof(x){ return amp*(Math.cos(k*x)+ka/2*Math.cos(2*k*x)); }
+  function slope(x){ return -amp*k*(Math.sin(k*x)+ka*Math.sin(2*k*x)); }
 
   s.appendChild(el('rect',{x:0,y:0,width:W,height:SY,fill:'#2a4550'}));
   s.appendChild(el('rect',{x:0,y:SY,width:W,height:H-SY,fill:'#0f2830'}));
@@ -2610,7 +2703,7 @@ function drawCaustics(lam,amp){
   // 水面プロファイル
   var d='', px;
   for(px=0;px<=W;px+=2){
-    var xc=(px-W/2)/pc, z=amp*Math.cos(k*xc);
+    var xc=(px-W/2)/pc, z=prof(xc);
     d+=(d?'L':'M')+px+' '+(SY-z*pc).toFixed(1)+' ';
   }
   s.appendChild(el('path',{d:d,fill:'none',stroke:'#7fb3c0','stroke-width':1.8}));
@@ -2620,13 +2713,13 @@ function drawCaustics(lam,amp){
   var NR=260;
   for(var i=0;i<=NR;i++){
     var pxi=i/NR*W, xc=(pxi-W/2)/pc;
-    var slope=-amp*k*Math.sin(k*xc);              // dz/dx
-    var nl=Math.hypot(slope,1), nx=-slope/nl, nz=1/nl;   // 上向き法線
+    var sl=slope(xc);
+    var nl=Math.hypot(sl,1), nx=-sl/nl, nz=1/nl;   // 上向き法線
     var cosi=nz;                                   // 入射方向 (0,-1) との内積
     var kk=1-eta*eta*(1-cosi*cosi); if(kk<0) continue;
     var cf=eta*cosi-Math.sqrt(kk);                 // t = eta*d + cf*n   d=(0,-1)
     var tx=cf*nx, tz=-eta+cf*nz;
-    var y0=SY-amp*Math.cos(k*xc)*pc;
+    var y0=SY-prof(xc)*pc;
     var L=(H-y0)/(-tz);                            // 画面下端まで
     g.appendChild(el('line',{x1:pxi.toFixed(1),y1:y0.toFixed(1),
       x2:(pxi+tx*L).toFixed(1),y2:(y0-tz*L).toFixed(1)}));
@@ -2650,18 +2743,25 @@ function drawCaustics(lam,amp){
   tx2(W-16,H-24,'s-lbl-a','10cm','end');
   return {R:R,F:F};
 }
+var BREAK=1/14;                      // 砕波の限界 H/λ=1/7 → a/λ=1/14
 function updateCaustics(){
   var lam=parseInt($('cwl').value,10)/10;
-  var amp=parseInt($('cam').value,10)/10;
-  var maxA=0.07*lam;                 // 砕けない範囲に制限
-  if(amp>maxA) amp=Math.round(maxA*10)/10;
+  // 振幅スライダーの可動域そのものを波長に連動させる
+  var maxTick=Math.max(1,Math.floor(lam*BREAK*10));   // 切り上げると限界を超えるので切り捨て
+  var am=$('cam');
+  if(+am.max!==maxTick) am.max=maxTick;
+  if(+am.value>maxTick) am.value=maxTick;
+  var amp=parseInt(am.value,10)/10;
+  var atLimit=(+am.value===maxTick);
   $('cwlV').textContent=lam.toFixed(1).replace(/\.0$/,'')+' cm';
-  $('camV').textContent=amp.toFixed(1)+' cm';
+  $('camV').textContent=amp.toFixed(1)+' cm'+(atLimit?'（上限）':'');
+  drawProfile(lam,amp);
   var o=drawCaustics(lam,amp);
   $('cR').textContent=o.R.toFixed(1)+' cm';
   $('cF').textContent=o.F.toFixed(0)+' cm';
   $('cP').textContent=lam.toFixed(1).replace(/\.0$/,'')+' cm';
-  $('cS').textContent=(amp/lam).toFixed(3);
+  $('cS').textContent=(amp/lam).toFixed(3)+' / 0.071';
+  $('cLim').textContent='この波長での振幅の上限は '+(lam*BREAK).toFixed(2)+' cm';
 }
 
 /* ---------- reflection spread ---------- */
